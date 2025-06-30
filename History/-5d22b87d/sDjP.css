@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+
+@theme{
+  --color-background: #0A0A0A;
+  --color-text-color: #B4B4B4;
+  --color-borderbd:#373639;
+  --color-degradetext-via: #5B5B5B;
+  --color-degradetext-to:#393939;
+
+  --color-shadow-shadowbutton: #60A5FA;
+
+;
+
+--animate-rotate-border: border-rotate  3s linear infinite;
+
+  @keyframes border-rotate {
+    to{
+      --border-angle:360deg;
+    }
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+
+.no-datepicker::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px; /* Ajuste a largura da scrollbar conforme necessário */
+  height:5px;
+  background: #000000;
+    border-radius: 5px; /* Ajuste o tamanho da scrollbar conforme necessário */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(250, 250, 250, 0.1); ;  /* Cor de fundo da trilha */
+}
+
+input[type="date"],
+input[type="time"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+
+/* body */
+

@@ -1,0 +1,98 @@
+import Image from "next/image"
+import Button from "@/ui/button"
+
+import "../../../globals.css";
+
+
+const Presentation = () => {
+
+  return (
+    <div className=" w-full bgred-300  flex  justify-center items-center min-h-[50dvh] h-full ">
+      <section className=" flex flex-col items-center w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 py-10 gap-6 sm:gap-10">
+
+        <main className="flex flex-col justify-center items-center max-w-[1240px]  w-full gap-2 sm:gap-5 text-text-color text-center px-5">
+          <div className="flex justify-center items-center ">
+            <Image
+              src="/profile.jpeg"
+              alt="Profile Image"
+              className="rounded-full"
+              width={150}
+              height={100}
+            />
+          </div>
+
+
+          <h1 className="text-xl sm:text-3xl lg:text-4xl font-semibold">
+            Olá, Eu sou Lukatonny
+            <span className="bg-clip-text bg-gradient-to-r from-gray-200 via-degradetext-via to-degradetext-to text-transparent"> Souza Ferreira.</span>
+          </h1>
+
+          <p className="text-sm sm:text-base lg:text-lg">
+            FrontEnd Developer<br />
+            <span>JavaScript | ReactJs | NextJs | Tailwind | TypeScript</span>
+          </p>
+
+          <p className="max-w-2xl text-xs sm:text-base lg:text-lg xl:text-base text-pretty">
+            No início de 2023, decidi explorar o mundo do desenvolvimento apenas
+            por curiosidade. Com o incentivo de um amigo, comecei a me aprofundar
+            no assunto. Porém, foi somente em meados de 2024 que resolvi focar
+            realmente na área, buscando o máximo de conteúdo gratuito disponível —
+            o que explica a ausência de certificados formais no momento.
+          </p>
+        </main>
+
+        <section className=" w-full  px-5 flex flex-wrap justify-center items-center gap-3 sm:gap-5 text-black">
+          <div className=" animate-rotate-border     rounded-lg
+          bg-conic/[from_var(--border-angle)]
+          from-background via-blue-400 to-background from-80% via-90% to-100%
+          p-px">
+            <Button className="w-full px-5 py-3 rounded-lg bg-neutral-900
+            text-text-color">Discord</Button>
+          </div>
+
+          <div className=" animate-rotate-border     rounded-lg
+        bg-conic/[from_var(--border-angle)]
+        from-background via-blue-400 to-background  from-80% via-90% to-100%
+        p-px">
+            <Button className="w-full px-5 py-3 rounded-lg bg-neutral-900
+            text-text-color">Github</Button>
+          </div>
+
+          <div className=" animate-rotate-border     rounded-lg
+        bg-conic/[from_var(--border-angle)]
+
+        from-background via-blue-400 to-background  from-80% via-90% to-100%
+        p-px">
+            <Button className="w-full px-5 py-3 rounded-lg bg-neutral-900
+            text-text-color ">Linkedin</Button>
+          </div>
+
+
+          <div className="relative rounded-xl p-6 bg-background shadow-lg text-white z-0">
+            <div
+              className="
+      absolute inset-0 -z-10 rounded-xl
+      bg-[conic-gradient(from_var(--border-angle),_#0A0A0A,_#60A5FA,_#0A0A0A)]
+      blur-lg
+      animate-rotate-border
+    "
+
+            ></div>
+            Conteúdo aqui
+          </div>
+
+
+
+
+
+        </section>
+
+      </section >
+
+    </div >
+  )
+
+}
+
+export default Presentation
+// #393939

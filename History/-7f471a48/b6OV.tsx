@@ -1,0 +1,74 @@
+import { useLayoutEffect, useRef, useState } from "react";
+import gsap from "gsap"
+// Atualização para usar onSubmitAction (renomeado)
+interface FeedbackFormProps {
+  onSubmitAction: (name: string, feedback: string) => void;
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+
+
+export default function FormFeedback({ onSubmitAction, show, setShow }: FeedbackFormProps) {
+  const [name, setName] = useState("");
+  const [feedback, setFeedback] = useState("");
+
+  // Função para lidar com o envio do formulário
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();  // Impede o comportamento padrão do formulário
+    onSubmitAction(name, feedback);  // Chama a função de ação
+    setName("");  // Limpa o campo de nome
+    setFeedback("");  // Limpa o campo de feedback
+  };
+
+  const test = useRef<HTMLFormElement>(null)
+
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      test.current,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, ease: "none", delay: 2.4 }
+    );
+
+
+  }, []);
+
+
+  return (
+    <form onSubmit={handleSubmit}
+      className="fixed flex flex-col  w-2/3 h-[50dvh] top-50 z-10 p-5 rounded-xl
+      lg:w-1/2 text-gray-300 gap-2 bg-background border-borderbd border"  >
+      <label className="flex justify-between">Descreva Sua experiencia
+        <button className="text-gray-100" onClick={() => setShow(false)}>X</button>
+      </label>
+
+      <label className="font-medium text-white">Nome</label>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Digite seu Nome e sobrenome"
+        className="border border-borderbd p-2 rounded w-full mb-2"
+        required
+      />
+
+      <label className="font-medium text-white">Feedback</label>
+      <input
+        type="text"
+        value={feedback}
+        onChange={(e) => setFeedback(e.target.value)}
+        placeholder="Escreva seu Feedback"
+        className="border border-borderbd p-2 rounded w-full mb-2"
+      />
+
+      <input
+        type="submit"
+        value="Enviar Feedback"
+        onClick={() => setShow(false)}
+        className="mt-10 cursor-pointer w-full
+        bg-gradient-to-r from-[#ffd700] to-[#b47e00] rounded text-black"
+      />
+    </form>
+  );
+}
+

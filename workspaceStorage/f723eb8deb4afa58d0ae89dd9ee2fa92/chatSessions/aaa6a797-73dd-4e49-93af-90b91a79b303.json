@@ -1,0 +1,394 @@
+{
+  "version": 3,
+  "requesterUsername": "Lukatonnyf",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/124458583",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_5d6834a5-75f7-4fdc-b380-a5373c4266c1",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 10
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 11
+            },
+            "agent": {
+              "extensionId": {
+                "value": "GitHub.copilot-chat",
+                "_lower": "github.copilot-chat"
+              },
+              "publisherDisplayName": "GitHub",
+              "extensionPublisherId": "GitHub",
+              "extensionDisplayName": "GitHub Copilot Chat",
+              "id": "github.copilot.workspace",
+              "description": "Ask about your workspace",
+              "metadata": {
+                "sampleRequest": "How do I build this project?",
+                "themeIcon": {
+                  "id": "code"
+                },
+                "hasFollowups": false,
+                "supportIssueReporting": false
+              },
+              "name": "workspace",
+              "fullName": "Workspace",
+              "locations": [
+                "panel"
+              ],
+              "modes": [
+                "ask"
+              ],
+              "slashCommands": [
+                {
+                  "name": "explain",
+                  "description": "Explain how the code in your active editor works"
+                },
+                {
+                  "name": "tests",
+                  "description": "Generate unit tests for the selected code",
+                  "disambiguation": [
+                    {
+                      "category": "create_tests",
+                      "description": "The user wants to generate unit tests.",
+                      "examples": [
+                        "Generate tests for my selection using pytest."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "fix",
+                  "description": "Propose a fix for the problems in the selected code",
+                  "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+                },
+                {
+                  "name": "new",
+                  "description": "Scaffold code for a new file or project in a workspace",
+                  "sampleRequest": "Create a RESTful API server using typescript",
+                  "isSticky": true,
+                  "disambiguation": [
+                    {
+                      "category": "create_new_workspace_or_extension",
+                      "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                      "examples": [
+                        "Scaffold a Node server.",
+                        "Create a sample project which uses the fileSystemProvider API.",
+                        "react application"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "newNotebook",
+                  "description": "Create a new Jupyter Notebook",
+                  "sampleRequest": "How do I create a notebook to load data from a csv file?",
+                  "disambiguation": [
+                    {
+                      "category": "create_jupyter_notebook",
+                      "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                      "examples": [
+                        "Create a notebook to analyze this CSV file."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "setupTests",
+                  "description": "Set up tests in your project (Experimental)",
+                  "sampleRequest": "add playwright tests to my project",
+                  "when": "config.github.copilot.chat.setupTests.enabled",
+                  "disambiguation": [
+                    {
+                      "category": "set_up_tests",
+                      "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                      "examples": [
+                        "Set up tests for this project."
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "disambiguation": [
+                {
+                  "category": "workspace_project_questions",
+                  "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+                  "examples": [
+                    "What does this project do?"
+                  ]
+                },
+                {
+                  "category": "find_code_in_workspace",
+                  "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+                  "examples": [
+                    "Where is the tree widget implemented?"
+                  ]
+                },
+                {
+                  "category": "generate_with_workspace_context",
+                  "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+                  "examples": [
+                    "Create a README for this project."
+                  ]
+                }
+              ]
+            },
+            "kind": "agent"
+          },
+          {
+            "range": {
+              "start": 10,
+              "endExclusive": 11
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 11,
+              "endLineNumber": 1,
+              "endColumn": 12
+            },
+            "text": " ",
+            "kind": "text"
+          },
+          {
+            "range": {
+              "start": 11,
+              "endExclusive": 19
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 12,
+              "endLineNumber": 1,
+              "endColumn": 20
+            },
+            "command": {
+              "name": "explain",
+              "description": "Explain how the code in your active editor works"
+            },
+            "kind": "subcommand"
+          },
+          {
+            "range": {
+              "start": 19,
+              "endExclusive": 50
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 20,
+              "endLineNumber": 1,
+              "endColumn": 51
+            },
+            "text": " 'catch' or 'finally' expected.",
+            "kind": "text"
+          }
+        ],
+        "text": "@workspace /explain 'catch' or 'finally' expected."
+      },
+      "variableData": {
+        "variables": []
+      },
+      "response": [
+        {
+          "value": "You are seeing the `'catch' or 'finally' expected.` error because your `try` block is missing a corresponding `catch` (or `finally`) block. In TypeScript (and JavaScript), every `try` must be followed by at least a `catch` or `finally`.\n\nHere's how you can fix it by adding a `catch` block:\n\n````typescript\n// ...existing code...\nexport async function POST(request: NextRequest) {\n  try {\n    // => Cria os campos para os textos\n    const { name, email, feedback } = await request.json();\n    console.log(\"dados recebidos: \", { name, email, feedback });\n\n    // => Checa se o campo está preencido ou não\n    if (!name || !email || !feedback) {\n      return NextResponse.json({ error: \"Campos faltando\" }, { status: 400 });\n    }\n    // ...continue your logic here (e.g., save to DB)...\n  } catch (error) {\n    console.error(error);\n    return NextResponse.json({ error: \"Erro interno do servidor\" }, { status: 500 });\n  }\n}\n// ...existing code...\n````\n\n**Gotcha:**  \n- Always handle errors in async functions to avoid unhandled promise rejections.\n- You should also finish the function logic after the validation (e.g., saving feedback to the database).",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/c:/Users/User/Documents/projetos-reais/portifolio-feedback/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_5e4aa1d7-fbc1-40a7-b42b-9e60e34bdd7d",
+      "result": {
+        "timings": {
+          "firstProgress": 1519,
+          "totalElapsed": 3494
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "// ...existing code...\nexport async function POST(request: NextRequest) {\n  try {\n    // => Cria os campos para os textos\n    const { name, email, feedback } = await request.json();\n    console.log(\"dados recebidos: \", { name, email, feedback });\n\n    // => Checa se o campo está preencido ou não\n    if (!name || !email || !feedback) {\n      return NextResponse.json({ error: \"Campos faltando\" }, { status: 400 });\n    }\n    // ...continue your logic here (e.g., save to DB)...\n  } catch (error) {\n    console.error(error);\n    return NextResponse.json({ error: \"Erro interno do servidor\" }, { status: 500 });\n  }\n}\n// ...existing code...\n",
+              "language": "typescript",
+              "markdownBeforeBlock": "You are seeing the `'catch' or 'finally' expected.` error because your `try` block is missing a corresponding `catch` (or `finally`) block. In TypeScript (and JavaScript), every `try` must be followed by at least a `catch` or `finally`.\n\nHere's how you can fix it by adding a `catch` block:\n\n"
+            }
+          ],
+          "modelMessageId": "572bf604-8bc9-4048-beb6-c8421db154cd",
+          "responseId": "c58ca8fe-e84e-407c-acdd-90a7b8bbffbd",
+          "sessionId": "86618d25-49e7-4867-bd0c-71ae00bff6d5",
+          "agentId": "github.copilot.workspace",
+          "command": "explain"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": false,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "explain",
+        "description": "Explain how the code in your active editor works"
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "c:\\Users\\User\\Documents\\projetos-reais\\portifolio-feedback\\src\\app\\api\\feedback.ts",
+              "_sep": 1,
+              "external": "file:///c%3A/Users/User/Documents/projetos-reais/portifolio-feedback/src/app/api/feedback.ts",
+              "path": "/c:/Users/User/Documents/projetos-reais/portifolio-feedback/src/app/api/feedback.ts",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 37,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1750993370545
+    }
+  ],
+  "sessionId": "aaa6a797-73dd-4e49-93af-90b91a79b303",
+  "creationDate": 1750993370454,
+  "isImported": false,
+  "lastMessageDate": 1750993370545,
+  "customTitle": "Missing catch block in TypeScript try statement"
+}

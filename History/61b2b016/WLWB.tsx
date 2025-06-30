@@ -1,0 +1,15 @@
+export interface ButtonProps {
+  text: string | React.ReactNode;
+  innerRef: React.Ref<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+export default function Button({ text, innerRef, onClick }: ButtonProps) {
+  return (
+    <button ref={innerRef} onClick={onClick} className="text-center px-7 py-3   w-full rounded-lg text-sm
+//  transition-all duration-300 transform lg:w-[auto] lg:text-normal lg:py-8
+  hover:scale-125 bg-btn">
+      {text}
+    </button>
+  )
+}

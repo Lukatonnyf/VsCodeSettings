@@ -1,0 +1,14 @@
+
+
+
+section{
+ position: relative;
+ overflow:hidden;
+}
+
+.intro,
+.outro{
+  display: flex;
+  justify-content:center;
+  align-items:center
+}

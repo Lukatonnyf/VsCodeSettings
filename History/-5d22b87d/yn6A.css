@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+
+@theme{
+  --color-background: #0A0A0A;
+  --color-text-color: #B4B4B4;
+  --color-borderbd:#373639;
+  --color-degradetext-via: #5B5B5B;
+  --color-degradetext-to:#393939;
+
+  --color-shadow-shadowbutton: #60A5FA;
+
+
+--animate-rotate-border: border-rotate  3s linear infinite;
+
+  @keyframes border-rotate {
+    to{
+      --border-angle:360deg;
+    }
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+.animate-rotate-border {
+}
+
+.animate-rotate-border {
+
+  animation: border-rotate 3s linear infinite;
+}
+/* act as a */
+/* .card-wrapper{
+  @apply relative
+  bg-gradient-to-b from-slate-700 to-slate-800
+  rounded-2xl
+  ;
+}
+/* gradient */
+/* .card-wrapper::before{
+  content: "";
+  background: conic-gradient(
+    rgba(244, 114, 182, 0.4) 0deg,
+    rgba(192, 132, 252, 0.4) 0deg,
+    transparent 80deg
+  );
+
+@apply absolute w-[150%] h-[150%] left-[-25%] top-[25%]  ;
+} */
+
+/* body */
+

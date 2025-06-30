@@ -1,0 +1,46 @@
+'use client'
+import { ArrowUp, Verified } from 'lucide-react';
+import { useState } from 'react';
+import TextareaAutosize from 'react-textarea-autosize';
+
+const Input = () => {
+  const [tamanho, setTamanho] = useState()
+  const [text, setText] = useState("")
+
+  function sendText() {
+
+  }
+
+  return (
+    <div className="w-full border  border-red-600 flex justify-center items-center h-full">
+      <div
+        style={{ border: '2px solid #29292D' }}
+        className=" flex flex-col justify-between py-1 px-5
+       w-[80dvw] h-[10dvh] bg-bg-secondcolor text-gray-100 rounded-3xl">
+
+        <TextareaAutosize placeholder="Digite Sua Mensagem"
+          onChange={(e) => setText(e.target.value)}
+          minRows={1}
+          maxRows={6}
+          className="w-full h-full  py-2
+            appearance-none outline-none shadow-none overflow-hidden " />
+
+
+        <section>
+          <ul className='flex justify-between gap-4'>
+            <li>+</li>
+            <li
+              onClick={sendText}
+            > {
+                text.length > 0 ? (
+                  <ArrowUp />
+                ) : (<Verified />)
+              }</li>
+          </ul>
+        </section>
+      </div>
+    </div >
+  )
+}
+
+export default Input

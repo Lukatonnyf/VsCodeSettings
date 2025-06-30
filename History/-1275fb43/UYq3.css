@@ -1,0 +1,18 @@
+
+h1{
+  font-size: 5vw;
+}
+
+section{
+ position: relative;
+ height:100svh;
+ overflow:hidden;
+ background:red;
+}
+
+.intro,
+.outro{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}

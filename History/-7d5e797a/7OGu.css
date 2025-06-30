@@ -1,0 +1,154 @@
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* 🌞 MODO CLARO - Variáveis padrão */
+:root {
+  /* 🎨 Cores de texto */
+  --color-text-primary: #121212;                    /* Cor principal de texto */
+  --color-text-secondary: #121212;                  /* Cor secundária de texto */
+  --color-text-tertiary-hover: #B91372;              /* Cor terciária para textos menores/destaques */
+
+  /* 🔷 Cores de fundo */
+  --color-bg-primary: #f5f5f5;                      /* Fundo principal do site */
+  --color-bg-secondary: #E5E5E7;                    /* Fundo de cartões, sidebar, etc. */
+  --color-bg-tertiary: #D5D5D7;                     /* Fundo alternativo/muted */
+
+  /* 🌈 Gradiente */
+  --color-gradient-start: #4A2480;                  /* Início do gradiente */
+  --color-gradient-middle: #B91372;                 /* Meio do gradiente */
+  --color-gradient-end: #A01A58;                    /* Fim do gradiente */
+
+  /* 🟢 Estados e bordas */
+  --color-border: #000;                             /* Cor padrão das bordas */
+  --color-success: #2E7D32;                         /* Verde para status de sucesso */
+  --color-error: #C62828;                           /* Vermelho para erros */
+
+  /* ⚙️ Variáveis globais */
+  --contrast-mode: default;                         /* Modo de contraste padrão */
+  --colorblind-filter: none;                        /* Filtro para daltonismo (inativo) */
+  --sidebar-width: 260px;                           /* Largura da sidebar */
+  --header-height: 70px;                            /* Altura do cabeçalho */
+  --border-radius: 12px;                            /* Raio padrão de borda */
+  --card-padding: 20px;                             /* Espaçamento interno de cards */
+  --transition-speed: 0.3s;                         /* Velocidade de transições animadas */
+
+  /* ☁️ Sombras */
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.3);         /* Sombra pequena */
+  --shadow-md: 0 10px 24px rgba(0, 0, 0, 0.4);       /* Sombra média */
+  --shadow-lg: w: 0 8px 24px rgba(0, 0, 0, 1);       /* Sombra grande */
+
+  /* 🎯 Integração shadcn/ui */
+  --radius: 0.625rem;                               /* Raio base utilizado por componentes */
+
+  --background: var(--color-bg-primary);            /* Fundo geral */
+  --secondary: var(--color-bg-secondary);           /* Cor secundária */
+  --tertiary: var(--color-bg-tertiary);             /* Cor terciária */
+
+  /* ==> Linear Gradient CSS */
+  --primary: var(--color-gradient-middle);          /* Cor primária gradient*/
+
+
+  --primary-text: var(--color-text-primary);          /* Cor de texto geral */
+  --text-secondary: var(--color-text-secondary);      /* Cor do Texto Secundário*/
+  --txt-tertiary: var(--color-text-tertiary);       /* Cor do Texto Terciário */
+
+  /* ==> ANALIZAR DEPOIS... */
+  /* --card: var(--color-bg-secondary);                /* Fundo dos cards */
+  /* --card-foreground: var(--color-text-primary);     Texto dentro de cards */
+
+
+  --accent: var(--color-gradient-end);              /* Cor de destaque (ex: links) */
+  --destructive: var(--color-error);                /* Usado para ações destrutivas */
+  --border: var(--color-border);                    /* Cor da borda padrão */
+  --input: var(--color-border);                     /* Cor da borda de inputs */
+  --ring: var(--color-gradient-middle);             /* Cor da borda de foco */
+  --color-txttertiary-hover: var( --color-text-tertiary-hover);
+
+
+}
+
+/* 🌙 MODO ESCURO */
+.dark {
+  --color-bg-primary: #121212;                      /* Fundo principal */
+  --color-bg-secondary: #1E1E1E;                    /* Fundo secundário */
+  --color-bg-tertiary: #2D2D2D;                     /* Fundo terciário */
+
+  --color-text-primary: #FFFFFF;                    /* Texto principal */
+  --color-text-secondary: #9CA3AF;                  /* Texto secundário */
+  --color-text-tertiary: #B91372;                  /* Texto Terciário */
+
+  --color-gradient-start: #4A2480;                  /* Gradiente início */
+  --color-gradient-middle: #B91372;                 /* Gradiente meio */
+  --color-gradient-end: #A01A58;                    /* Gradiente fim */
+
+  --color-border: #666666;                          /* Cor da borda */
+  --color-success: #2E7D32;                         /* Verde sucesso */
+  --color-error: #C62828;                           /* Vermelho erro */
+
+
+  /* Mapeando */
+  --background: var(--color-bg-primary);            /* Fundo base */
+
+  /* CÓDIGO A ANALIZAR... */
+  /* --bgk-secondary: var(--color-bg-secondary);           Cor secundária */
+  /* --bgk-tertiary: var(--color-bg-tertiary);             Cor terciária */
+  /* --text-primary-foreground: #ffffff; */
+
+
+  --primary-text: var(--color-text-primary);      /* Cor de Texto Primario*/
+  --text-secondary: var(--color-text-secondary);   /* Cor de Texto secundário */
+  --card: var(--color-bg-secondary);              /* Cor secundária (dos cards) */
+  --popover: var(--color-bg-secondary);             /* Fundo de popovers */
+  --popover-foreground: var(--color-text-primary);  /* Texto dos popovers */
+  --text-error: var(--color-error);               /* Cor destrutiva */
+  --color-txttertiary-hover: var( --color-text-tertiary-hover);
+
+
+
+
+
+}
+
+/* 🎯 Tema inline com mapeamento de variáveis para Tailwind/shadcn */
+@theme inline {
+ --radius-sm: calc(var(--radius) - 4px);            /* Borda pequena */
+  --radius-md: calc(var(--radius) - 2px);            /* Borda média */
+  --radius-lg: var(--radius);                        /* Borda padrão */
+  --radius-xl: calc(var(--radius) + 4px);            /* Borda grande */
+
+  --color-background: var(--background);             /* Fundo */
+  --color-foreground: var(--foreground);             /* Texto */
+  --color-txttertiary-hover: var( --color-text-tertiary-hover);
+
+  --color-primary: var(--primary);                   /* Cor principal */
+  --color-secondary: var(--secondary);               /* Cor secundária */
+  --color-tertiary: var(--tertiary);                 /* Terciário */
+  --color-text-secondary: var(--color-text-secondary); /* Texto muted */
+  --color-border: var(--border);                     /* Borda */
+  --color-ring: var(--ring);                         /* Anel foco */
+
+
+}
+
+/* 🧩 Estilos globais aplicados a todos os elementos via Tailwind */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;             /* Borda e foco base */
+  }
+  body {
+    @apply bg-background text-foreground;             /* Fundo e texto principais */
+  }
+}
+
+/* 🎨 Utilitário: Gradiente em 45 graus */
+.bg-gradient-45 {
+  background: linear-gradient(
+    45deg,
+    var(--color-gradient-start),                      /* Início do gradiente */
+    var(--color-gradient-middle),                     /* Meio do gradiente */
+    var(--color-gradient-end)                         /* Fim do gradiente */
+  );
+}

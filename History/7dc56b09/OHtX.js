@@ -1,0 +1,1 @@
+const helloWord = console.log("Hello Devs!")

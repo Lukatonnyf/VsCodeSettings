@@ -1,0 +1,85 @@
+'use client'
+
+import React, { useLayoutEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import Image from 'next/image'
+
+import test from "../../public/peoplestudy.png"
+import { Goldman } from 'next/font/google';
+import Button from './components/button'
+
+
+const goldman = Goldman({
+    subsets: ['latin'],
+    weight: ['400', '700'],
+    display: 'swap',
+});
+
+export default function HomePage() {
+    const text = useRef<HTMLDivElement>(null)
+    const Card = useRef<HTMLDivElement>(null)
+
+    useLayoutEffect(() => {
+      if (text.current) {
+        gsap.to(text.current, {
+          delay: 1,
+          opacity: 1,
+          duration: 1.5,
+          ease: 'none',
+        })
+      }
+    }, [])
+
+    useLayoutEffect(() => {
+        if (text.current) {
+            gsap.to(text.current, {
+                delay: 1,
+                opacity: 1,
+                duration: 1.5,
+                ease: 'none',
+            })
+        }
+    }, [])
+
+    return (
+        <div className={`${goldman.className} w-full min-h-[100dvh] p-5 flex justify-center items-center 
+        shadow-custom-purple-700`}
+        >
+            <div className='flex flex-col justify-center items-center w-full min-h-[70dvh] h-full p-5 
+            bg-gradient-to-b from-[#1D1D1D] to-[#0F0F0F] rounded-t-4xl  lg:flex-row'>
+                <section
+                    ref={text}
+                    className="w-full  flex flex-col justify-between items-start text-gray-200 p-5 gap-5 
+                    opacity-00 lg:p-10 lg:gap-15">
+                    <div className='flex flex-col -space-y-2 p-0 '>
+                        <h1 className="flex font-medium text-lg w-full sm:text-4xl gap-2">
+                            Crie seu
+                            <span className='text-textopaco'> planejamento</span>
+                        </h1>
+
+                        <h2 className="font-light text-sm text-gray-400 sm:text-xl">
+                            e organize sua
+                            <span className="text-textopaco"> rotina</span>
+                        </h2>
+                    </div>
+
+                    <div className='flex flex-row gap-2 lg:gap-5'>
+                        <Button text={'Testando'} className="bg-gray-100 text-black" />
+                        <Button text={'Testando'} className="bg-btnncolor text-white" />
+                    </div>
+                </section>
+
+                <div className='flex justify-center items-center flex-col 
+                     w-full max-h-full'>
+                    <Image src={test} alt="testando"
+                        className="object-cover rounded-xl w-[40dvh]"
+                        width={500}
+                        height={300}
+                        layout="intrinsic"
+                    />
+
+                </div>
+            </div>
+        </div>
+    )
+}

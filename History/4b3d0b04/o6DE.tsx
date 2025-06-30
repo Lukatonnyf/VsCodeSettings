@@ -1,0 +1,51 @@
+import { ObjectId } from 'mongodb';
+import { connectToDatabase } from '@/lib/mongodb';
+import Image from 'next/image';
+
+
+export type PageParams = {
+  id: string;
+};
+
+// Usar a tipagem inline para os props
+export default async function ProfilePage({ params }: { params: PageParams }) {
+  const { id } = params;
+
+  const db = await connectToDatabase(process.env.MONGODB_URI!);
+  const user = await db.collection("users").findOne({ _id: new ObjectId(id) });
+
+  if (!user) {
+    return <div>Usuário não encontrado</div>;
+  }
+
+
+
+  return (
+    <div className='flex  flex-col h-screen '>
+      <section className='flex justify-center items-center
+       h-full mt-16 bg-blue-300 p-5'>
+
+
+        <div className='flex gap-5 bg-secondary container mx-auto   max-w-3xl py-8 px-4 '>
+          <div>
+            <Image
+              src="/defaul.webp"
+              alt="test"
+              width={200}
+              height={50}
+              className='w-32 h-32 border rounded-full'
+            />
+          </div>
+
+          <div className='flex flex-col gap-2'>
+            <p className='uppercase font-bold text-xl'>{user.name}</p>
+            <p className='text-tertiary'>Email: {user.email}</p>
+            <p className='text-secondary'>Cadastrado em: {new Date(user.subscribedAt).toLocaleDateString()}</p>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}

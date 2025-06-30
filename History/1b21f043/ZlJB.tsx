@@ -1,0 +1,33 @@
+export default function HomePage() {
+  <Card title="Bem-vindo(a) de volta, User"
+    className="md: w-2/3"
+    description="Dia da semana, Dia(Num) mês e ano atual"
+    buttons={[
+      {
+        text: (
+          <span className="flex sm:justify-center items-center gap-2 ">
+            < BiPlus className="w-4 h-4" /> Criar Evento
+          </span>
+        ),
+        className: "text-start bg-gradient-45 text-white hover:bg-bg-primary"
+      },
+      {
+        text: (
+          <span className="flex sm:justify-center items-center gap-2 ">
+            <BiSolidEnvelope className="w-4 h-4 " /> Enviar Convite
+          </span>
+        ),
+        className: "bg-bg-tertiary text-sm   hover:bg-bg-primary"
+      },
+      {
+        text: (
+          <span className="flex sm:justify-center items-center gap-2 ">
+            <BiSolidCameraPlus className="w-4 h-4" /> Compartilhar Fotos
+          </span>
+        ), className: "text-start  text-white r bg-bg-tertiary text-sm text-white hover:bg-bg-primary"
+      },
+
+    ]}
+  />
+  );
+}
