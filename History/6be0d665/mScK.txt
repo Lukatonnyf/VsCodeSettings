@@ -1,1 +1,0 @@
-o http é um protocolo na camada de ação

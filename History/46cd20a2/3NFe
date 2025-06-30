@@ -1,5 +1,0 @@
-MONGODB_URI=mongodb+srv://feedbacks:<db_password>@cluster0.rlov7no.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
-# Database Username & Password
-# Username: lukatonnydevelopment
-# Password: feedbackproject

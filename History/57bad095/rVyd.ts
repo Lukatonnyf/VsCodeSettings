@@ -1,5 +1,0 @@
-class ListCostumerController{
-
-}
-
-export { ListCostumerController }

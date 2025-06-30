@@ -1,4 +1,0 @@
-
-MONGODB_URI=mongodb+srv://users:teste123@cluster0.h5mtb2a.mongodb.net/communitEventy?retryWrites=true&w=majority
-
-# password jwt vercel => minha_super_senha_secretissima07
